@@ -8,18 +8,9 @@
 	</header>
 
 	<main class="bg-red-600 h-5/6 overflow-x-auto">
-		{#each { length: 20 } as _, i}
-			<div class="flex m-2 border rounded-lg bg-white h-10">
-                <p>Name of the exercise</p>
-                <p>Exercise repetition</p>
-                
-                <div class="flex">
-                    <img src="cricle.svg" alt="House" class="w-10" />
-                    <img src="cricle.svg" alt="House" class="w-10" />
-                    <img src="cricle.svg" alt="House" class="w-10" />
-                </div>
-                </div>
-		{/each}
+		<div class="bg-yellow-600">
+		<a href="today">today</a>
+	</div>
 	</main>
 
 	<footer class="bg-green-600 h-20">
