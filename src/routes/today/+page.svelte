@@ -1,6 +1,6 @@
 <script>
 	import { exercises } from "../../store";
-	import Exercise from "./Exercise.svelte";
+	import Exercise from "../../components/ExerciseCard.svelte";
 
 </script>
 
