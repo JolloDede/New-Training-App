@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { exercises } from "../../../store";
-	import Exercise from "./Exercise.svelte";
+	import Exercise from "../../../components/ExerciseEdit.svelte";
 
 </script>
 
