@@ -1,19 +1,12 @@
 <script lang="ts">
-	// let
+	import Main from "../components/default/Main.svelte";
+
 </script>
 
-<div class="flex flex-col h-screen">
-	<header class="bg-blue-600 h-20">
-		<h1 class="text-4xl font-extrabold">Training App</h1>
-	</header>
-
-	<main class="bg-red-600 h-5/6 overflow-x-auto">
-		<div class="bg-yellow-600">
-		<a href="today">today</a>
+<Main>
+	<div class="m-4 p-4 bg-sapphire-50 border-sapphire-400 rounded-lg">
+		<a href="today" class="text-sapphire-600">
+			today you are gona change the world!
+		</a>
 	</div>
-	</main>
-
-	<footer class="bg-green-600 h-20">
-		<img src="house.svg" alt="House" class="w-10" />
-	</footer>
-</div>
+</Main>

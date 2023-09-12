@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { exercises } from '../store';
-	import BinIcon from './BinIcon.svelte';
-	import EditIcon from './EditIcon.svelte';
+	import BinIcon from './Icon/BinIcon.svelte';
+	import EditIcon from './Icon/EditIcon.svelte';
 
     export let id: string;
 	export let exerciseName: string;

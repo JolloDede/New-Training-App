@@ -1,11 +1,12 @@
 <script>
 	import { exercises } from "../../store";
 	import Exercise from "../../components/ExerciseCard.svelte";
+	import Main from "../../components/default/Main.svelte";
 
 </script>
 
-<main class="flex flex-col bg-red-600 h-5/6 overflow-x-auto">
+<Main>
 	{#each $exercises as exercise}
 		<Exercise name={exercise.name} repAmount={exercise.repetition} />
 	{/each}
-</main>
+</Main>
