@@ -6,7 +6,7 @@
 
 <div class="flex flex-col bg-fuchsia-600 h-5/6 overflow-x-auto">
     {#each $exercises as $exercise}
-		<Exercise bind:exerciseName={$exercise.name} bind:amount={$exercise.repetition} />
+		<Exercise bind:id={$exercise.id} bind:exerciseName={$exercise.name} bind:amount={$exercise.repetition} />
 	{/each}
 </div>
 
