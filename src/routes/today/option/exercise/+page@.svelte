@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Button from '../../../../components/default/Button.svelte';
 	import Main from '../../../../components/default/Main.svelte';
 	import PrimaryButton from '../../../../components/default/PrimaryButton.svelte';
 	import SecondaryButton from '../../../../components/default/SecondaryButton.svelte';
