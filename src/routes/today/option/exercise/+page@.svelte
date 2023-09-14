@@ -1,0 +1,64 @@
+<script lang="ts">
+	import Main from '../../../../components/default/Main.svelte';
+	import PrimaryButton from '../../../../components/default/PrimaryButton.svelte';
+	import SecondaryButton from '../../../../components/default/SecondaryButton.svelte';
+	import { exercises } from '../../../../store';
+	import newUniqueId from 'locally-unique-id-generator';
+
+	let name: string = '';
+	let repetition: number = 10;
+
+	function handleSaveClick() {
+		exercises.update((old: Exercise[]) => {
+			let newExer: Exercise = { id: newUniqueId(), name: name, repetition: repetition };
+			return [...old, newExer];
+		});
+		window.history.back();
+	}
+
+	function backCLickHandler() {
+		window.history.back();
+	}
+</script>
+
+<Main>
+	<div class="m-auto w-4/5">
+		<SecondaryButton on:click={backCLickHandler}>Back</SecondaryButton>
+		<form>
+			<div class="grid gap-6 mb-6 md:grid-cols-2">
+				<div>
+					<label for="iName" class="">Exercise name</label>
+					<!-- svelte-ignore a11y-autofocus -->
+					<input
+						class=""
+						id="iName"
+						bind:value={name}
+						placeholder="Enter exercise name"
+						autofocus
+						required
+					/>
+				</div>
+				<div>
+					<label for="iRep">Repetition</label>
+					<input id="iRep" type="number" bind:value={repetition} />
+				</div>
+				<div class="w-full">
+					<PrimaryButton on:click={handleSaveClick}>Save</PrimaryButton>
+				</div>
+			</div>
+		</form>
+	</div>
+</Main>
+
+<style>
+	label {
+		@apply block mb-2 font-medium text-sapphire-700;
+	}
+
+	input {
+		@apply block w-full p-2.5 border-2 bg-sapphire-50 border-sapphire-300 text-sapphire-900 text-sm rounded-lg outline-none;
+	}
+	input:focus {
+		@apply border-blue-500;
+	}
+</style>
