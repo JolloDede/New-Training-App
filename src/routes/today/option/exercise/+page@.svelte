@@ -9,11 +9,16 @@
 	let name: string = '';
 	let repetition: number = 10;
 
-	function handleSaveClick() {
-		exercises.update((old: Exercise[]) => {
-			let newExer: Exercise = { id: newUniqueId(), name: name, repetition: repetition };
-			return [...old, newExer];
-		});
+	function handleSubmit() {
+		// exercises.update((old: Exercise[]) => {
+		// 	let newExer: Exercise = { id: newUniqueId(), name: name, repetition: repetition };
+		// 	return [...old, newExer];
+		// });
+		// exercises.set((old: Exercise[]) => {
+		// 	let newExer: Exercise = { id: newUniqueId(), name: name, repetition: repetition };
+		// 	return [...old, newExer];
+		// });
+		$exercises = [...$exercises, { id: newUniqueId(), name: name, repetition: repetition }];
 		window.history.back();
 	}
 
@@ -25,7 +30,7 @@
 <Main>
 	<div class="m-auto w-4/5">
 		<SecondaryButton on:click={backCLickHandler}>Back</SecondaryButton>
-		<form>
+		<form on:submit={handleSubmit}>
 			<div class="grid gap-6 mb-6 md:grid-cols-2">
 				<div>
 					<label for="iName" class="">Exercise name</label>
@@ -44,7 +49,7 @@
 					<input id="iRep" type="number" bind:value={repetition} />
 				</div>
 				<div class="w-full">
-					<PrimaryButton on:click={handleSaveClick}>Save</PrimaryButton>
+					<PrimaryButton>Save</PrimaryButton>
 				</div>
 			</div>
 		</form>
