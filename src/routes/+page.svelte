@@ -12,7 +12,7 @@ import Button from '../components/default/Button.svelte';
 	<div class="m-4 p-4 bg-sapphire-50 border-sapphire-400 rounded-lg">
 		<a href="today" class="text-sapphire-600"> today you are gona change the world! </a>
 	</div>
-	<div class="flex flex-col m-4 p-4 bg-sapphire-50 text-zinc-800 rounded-lg" style="height: 28rem; width: 24rem;">
+	<!-- <div class="flex flex-col m-4 p-4 bg-sapphire-50 text-zinc-800 rounded-lg" style="height: 28rem; width: 24rem;">
 		<div class="font-semibold text-2xl">Calendar</div>
 		<div class="flex flex-wrap">
 			<CalendarDay>Mo</CalendarDay>
@@ -28,5 +28,5 @@ import Button from '../components/default/Button.svelte';
 				</div>
 			{/each}
 		</div>
-	</div>
+	</div> -->
 </Main>
