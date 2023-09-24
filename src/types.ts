@@ -4,3 +4,9 @@ type Exercise = {
     name: string;
     repetition: number;
 }
+
+export enum SetState {
+    Default,
+    Done,
+    Failed
+}

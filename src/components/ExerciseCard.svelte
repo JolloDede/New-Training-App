@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Circle from './Icon/Circle.svelte';
+	import SetButton from './SetButton.svelte';
 	import Button from './default/Button.svelte';
 
 	export let name: string;
@@ -11,15 +12,9 @@
 	<p>{repAmount}</p>
 
 	<div class="flex">
-		<Button class="">
-			<Circle />
-		</Button>
-		<Button class="test">
-			<Circle />
-		</Button>
-		<Button class="test">
-			<Circle />
-		</Button>
+		<SetButton />
+		<SetButton />
+		<SetButton />
 	</div>
 </div>
 
