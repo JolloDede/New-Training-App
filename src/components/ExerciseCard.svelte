@@ -8,7 +8,7 @@
 </script>
 
 <div class="flex items-center justify-between m-2 p-2 border rounded-lg bg-white h-10">
-	<p>{name}</p>
+	<p class="break-words">{name}</p>
 	<p>{repAmount}</p>
 
 	<div class="flex">
