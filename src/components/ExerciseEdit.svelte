@@ -18,13 +18,13 @@
 	}
 </script>
 
-<div class="flex m-2 p-0 border rounded-lg bg-white h-12">
+<div class="flex m-2 p-0 border rounded-lg bg-white">
 	{#if editing}
 		<form class="w-full" on:submit={() => (editing = false)}>
-			<div class="flex justify-around">
-				<input type="text" bind:value={exerciseName} />
-				<input type="number" bind:value={amount} />
-				<div class="w-1/5">
+			<div class="grid grid-cols-3">
+				<input class="w-24" type="text" bind:value={exerciseName} />
+				<input class="w-20" type="number" bind:value={amount} />
+				<div class="w-1/3">
 					<PrimaryButton>Save</PrimaryButton>
 					<SecondaryButton>Cancle</SecondaryButton>
 				</div>

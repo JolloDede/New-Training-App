@@ -30,26 +30,4 @@
 	<div class="m-4 p-4 bg-sapphire-50 border-sapphire-400 rounded-lg">
 		<a href="today" class="text-sapphire-600"> today you are gona change the world! </a>
 	</div>
-	<div
-		class="flex flex-col m-4 p-4 bg-sapphire-50 text-zinc-800 rounded-lg"
-		style="height: 28rem; width: 24rem;"
-	>
-		<div class="font-semibold text-2xl">Calendar</div>
-		<div class="grid grid-cols-7">
-			<CalendarDay>Mo</CalendarDay>
-			<CalendarDay>Di</CalendarDay>
-			<CalendarDay>Mi</CalendarDay>
-			<CalendarDay>Do</CalendarDay>
-			<CalendarDay>Fr</CalendarDay>
-			<CalendarDay>Sa</CalendarDay>
-			<CalendarDay>So</CalendarDay>
-			{#each dayArr as day}
-				<div>
-					{#if day != 0}
-						{day}
-					{/if}
-				</div>
-			{/each}
-		</div>
-	</div>
 </Main>
