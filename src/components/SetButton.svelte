@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { SetState } from '../types';
 	import Circle from './Icon/Circle.svelte';
-	import Button from './default/Button.svelte';
 
 	let state = SetState.Default;
 
@@ -24,7 +23,7 @@
 	}
 </script>
 
-<Button on:click={handleClick}>
+<button on:click={handleClick} class="px-4">
 	{#if state == SetState.Default}
 		<Circle class="stroke-black" />
 	{/if}
@@ -34,4 +33,4 @@
 	{#if state == SetState.Failed}
 		<Circle class="fill-red-600 stroke-red-600" />
 	{/if}
-</Button>
+</button>
