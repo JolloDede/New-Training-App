@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Button from '../../../../components/default/Button.svelte';
-	import Main from '../../../../components/default/Main.svelte';
+	import PageTemplate from '../../../../components/PageTemplate.svelte';
 	import PrimaryButton from '../../../../components/default/PrimaryButton.svelte';
 	import SecondaryButton from '../../../../components/default/SecondaryButton.svelte';
 	import { exercises } from '../../../../store';
@@ -27,34 +26,36 @@
 	}
 </script>
 
-<Main>
-	<div class="m-auto w-4/5">
-		<SecondaryButton on:click={backCLickHandler}>Back</SecondaryButton>
-		<form on:submit={handleSubmit}>
-			<div class="grid gap-6 mb-6 md:grid-cols-2">
-				<div>
-					<label for="iName" class="">Exercise name</label>
-					<!-- svelte-ignore a11y-autofocus -->
-					<input
-						class=""
-						id="iName"
-						bind:value={name}
-						placeholder="Enter exercise name"
-						autofocus
-						required
-					/>
+<PageTemplate>
+	<svelte:fragment slot="main">
+		<div class="m-auto w-4/5">
+			<SecondaryButton on:click={backCLickHandler}>Back</SecondaryButton>
+			<form on:submit={handleSubmit}>
+				<div class="grid gap-6 mb-6 md:grid-cols-2">
+					<div>
+						<label for="iName" class="">Exercise name</label>
+						<!-- svelte-ignore a11y-autofocus -->
+						<input
+							class=""
+							id="iName"
+							bind:value={name}
+							placeholder="Enter exercise name"
+							autofocus
+							required
+						/>
+					</div>
+					<div>
+						<label for="iRep">Repetition</label>
+						<input id="iRep" type="number" bind:value={repetition} />
+					</div>
+					<div class="w-full">
+						<PrimaryButton>Save</PrimaryButton>
+					</div>
 				</div>
-				<div>
-					<label for="iRep">Repetition</label>
-					<input id="iRep" type="number" bind:value={repetition} />
-				</div>
-				<div class="w-full">
-					<PrimaryButton>Save</PrimaryButton>
-				</div>
-			</div>
-		</form>
-	</div>
-</Main>
+			</form>
+		</div>
+	</svelte:fragment>
+</PageTemplate>
 
 <style>
 	label {
