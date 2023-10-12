@@ -3,7 +3,7 @@
 
 <div class="flex items-center justify-between m-2 p-2 border rounded-lg bg-white">
 	<div>
-		<p class="break-words max-w-xs"><slot name="name" /></p>
+		<p class="break-all max-w-xs"><slot name="name" /></p>
 	</div>
 	<div>
 		<p><slot name="repetitions" /></p>
