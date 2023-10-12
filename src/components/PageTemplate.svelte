@@ -5,13 +5,15 @@
 		<div class="flex h-20 ml-6 items-center">
 			<a href="/" class="text-4xl font-extrabold">Training App</a>
 		</div>
-        <hr>
+		<hr />
 		<slot name="header" />
 	</header>
 	<main class="grow overflow-y-auto">
-        <slot name="main" />
-    </main>
+		<div class="mb-20">
+			<slot name="main" />
+		</div>
+	</main>
 	<footer class="">
-        <slot name="footer" />
-    </footer>
+		<slot name="footer" />
+	</footer>
 </div>
