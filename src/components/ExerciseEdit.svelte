@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { exercises } from '../store';
+	import type { ExerciseType } from '../types';
 	import ExerciseC from './ExerciseC.svelte';
 	import BinIcon from './Icon/BinIcon.svelte';
 	import EditIcon from './Icon/EditIcon.svelte';
+	import SelectExerciseType from './SelectExerciseType.svelte';
 	import Button from './default/Button.svelte';
 	import PrimaryButton from './default/PrimaryButton.svelte';
 	import SecondaryButton from './default/SecondaryButton.svelte';
@@ -10,6 +12,7 @@
 	export let id: string;
 	export let exerciseName: string;
 	export let amount: number;
+	export let exerciseType: ExerciseType;
 	let editing = false;
 
 	function deleteExercise() {
@@ -25,6 +28,7 @@
 			<div class="grid grid-cols-3">
 				<input class="w-24" type="text" bind:value={exerciseName} />
 				<input class="w-20" type="number" bind:value={amount} />
+				<SelectExerciseType bind:SelectedType={exerciseType} />
 				<div class="w-1/3">
 					<PrimaryButton>Save</PrimaryButton>
 					<SecondaryButton>Cancle</SecondaryButton>

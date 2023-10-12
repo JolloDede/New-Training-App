@@ -4,20 +4,15 @@
 	import SecondaryButton from '../../../../components/default/SecondaryButton.svelte';
 	import { exercises } from '../../../../store';
 	import newUniqueId from 'locally-unique-id-generator';
+	import { ExerciseType } from '../../../../types';
+	import SelectExerciseType from '../../../../components/SelectExerciseType.svelte';
 
 	let name: string = '';
 	let repetition: number = 10;
+	let exerciseType = ExerciseType.Strength;
 
 	function handleSubmit() {
-		// exercises.update((old: Exercise[]) => {
-		// 	let newExer: Exercise = { id: newUniqueId(), name: name, repetition: repetition };
-		// 	return [...old, newExer];
-		// });
-		// exercises.set((old: Exercise[]) => {
-		// 	let newExer: Exercise = { id: newUniqueId(), name: name, repetition: repetition };
-		// 	return [...old, newExer];
-		// });
-		$exercises = [...$exercises, { id: newUniqueId(), name: name, repetition: repetition }];
+		$exercises = [...$exercises, { id: newUniqueId(), name: name, repetition: repetition, type: exerciseType }];
 		window.history.back();
 	}
 
@@ -31,6 +26,8 @@
 		<div class="m-auto w-4/5">
 			<SecondaryButton on:click={backCLickHandler}>Back</SecondaryButton>
 			<form on:submit={handleSubmit}>
+				<SelectExerciseType bind:SelectedType={exerciseType} />
+
 				<div class="grid gap-6 mb-6 md:grid-cols-2">
 					<div>
 						<label for="iName" class="">Exercise name</label>
@@ -65,7 +62,7 @@
 	input {
 		@apply block w-full p-2.5 border-2 bg-sapphire-50 border-sapphire-300 text-sapphire-900 text-sm rounded-lg outline-none;
 	}
-	
+
 	input:focus {
 		@apply border-blue-500;
 	}

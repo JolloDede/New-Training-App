@@ -9,6 +9,7 @@
 		bind:id={$exercise.id}
 		bind:exerciseName={$exercise.name}
 		bind:amount={$exercise.repetition}
+		bind:exerciseType={$exercise.type}
 	/>
 {/each}
 
