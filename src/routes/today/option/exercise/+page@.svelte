@@ -65,6 +65,7 @@
 	input {
 		@apply block w-full p-2.5 border-2 bg-sapphire-50 border-sapphire-300 text-sapphire-900 text-sm rounded-lg outline-none;
 	}
+	
 	input:focus {
 		@apply border-blue-500;
 	}

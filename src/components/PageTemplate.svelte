@@ -8,7 +8,7 @@
         <hr>
 		<slot name="header" />
 	</header>
-	<main class="overflow-y-auto">
+	<main class="grow overflow-y-auto">
         <slot name="main" />
     </main>
 	<footer class="">
