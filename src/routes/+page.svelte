@@ -1,11 +1,6 @@
 <script lang="ts">
 	import Calendar from '../components/Calendar.svelte';
-import CalendarDay from '../components/CalendarDay.svelte';
-	import Button from '../components/default/Button.svelte';
-	import FancyButton from '../components/default/FancyButton.svelte';
 	import Main from '../components/default/Main.svelte';
-	import PrimaryButton from '../components/default/PrimaryButton.svelte';
-	import SecondaryButton from '../components/default/SecondaryButton.svelte';
 </script>
 
 <Main>
