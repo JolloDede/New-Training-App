@@ -4,7 +4,7 @@
     export let SelectedType: ExerciseType;
 </script>
 
-<select bind:value={SelectedType}>
+<select bind:value={SelectedType} class="text-sapphire-700 p-2 rounded-lg">
     <!-- Enums Suck in Typescript -->
     <option value={ExerciseType.Strength}>
         {ExerciseType.Strength}

@@ -20,20 +20,3 @@
 <div>
 	<ExerciseList list={StretchArr} title="Stretch" />
 </div>
-
-<!-- {#each $exercises as exercise}
-	<ExerciseC>
-		<svelte:fragment slot="name">
-			{exercise.name}
-		</svelte:fragment>
-		<svelte:fragment slot="repetitions">
-			{exercise.repetition}
-		</svelte:fragment>
-
-		<svelte:fragment slot="end">
-			<SetButton />
-			<SetButton />
-			<SetButton />
-		</svelte:fragment>
-	</ExerciseC>
-{/each} -->

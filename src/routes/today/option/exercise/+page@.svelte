@@ -25,7 +25,7 @@
 	<svelte:fragment slot="main">
 		<div class="m-auto w-4/5">
 			<SecondaryButton on:click={backCLickHandler}>Back</SecondaryButton>
-			<form on:submit={handleSubmit}>
+			<form on:submit={handleSubmit} class="mt-2">
 				<SelectExerciseType bind:SelectedType={exerciseType} />
 
 				<div class="grid gap-6 mb-6 md:grid-cols-2">
@@ -47,6 +47,7 @@
 					</div>
 					<div class="w-full">
 						<PrimaryButton>Save</PrimaryButton>
+						<SecondaryButton on:click={backCLickHandler}>Cancel</SecondaryButton>
 					</div>
 				</div>
 			</form>
