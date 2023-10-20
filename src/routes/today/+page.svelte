@@ -3,12 +3,26 @@
 	import ExerciseCard from '../../components/ExerciseCard.svelte';
 	import ExerciseC from '../../components/ExerciseC.svelte';
 	import SetButton from '../../components/SetButton.svelte';
+	import { ExerciseType } from '../../types';
+	import ExerciseList from './ExerciseList.svelte';
+
+	let StretchArr = $exercises.filter((exer) => exer.type == ExerciseType.Streching);
+	let ElementArr = $exercises.filter((exer) => exer.type == ExerciseType.Element);
+	let StrengthArr = $exercises.filter((exer) => exer.type == ExerciseType.Strength);
 </script>
 
-{#each $exercises as exercise}
-	<!-- <ExerciseCard name={exercise.name} repAmount={exercise.repetition} /> -->
+<div>
+	<ExerciseList list={ElementArr} title="Element" />
+</div>
+<div>
+	<ExerciseList list={StrengthArr} title="Strength" />
+</div>
+<div>
+	<ExerciseList list={StretchArr} title="Stretch" />
+</div>
+
+<!-- {#each $exercises as exercise}
 	<ExerciseC>
-		<!-- <p slot="name">{exercise.name}</p> -->
 		<svelte:fragment slot="name">
 			{exercise.name}
 		</svelte:fragment>
@@ -22,4 +36,4 @@
 			<SetButton />
 		</svelte:fragment>
 	</ExerciseC>
-{/each}
+{/each} -->

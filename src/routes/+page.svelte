@@ -27,7 +27,7 @@
 
 <PageTemplate>
 	<svelte:fragment slot="main">
-		<div class="m-4 p-4 bg-sapphire-50 border-sapphire-400 rounded-lg">
+		<div class="mt-4 p-4 bg-sapphire-50 border-sapphire-400 rounded-lg">
 			<a href="today" class="text-sapphire-600"> today you are gona change the world! </a>
 		</div>		
 	</svelte:fragment>
