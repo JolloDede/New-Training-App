@@ -1,17 +1,11 @@
 <script lang="ts">
 	import { exercises } from '../../../store';
-	import ExerciseEdit from '../../../components/ExerciseEdit.svelte';
+	import ExerciseEdit from './ExerciseEdit.svelte';
 	import PlusIcon from '../../../components/Icon/PlusIcon.svelte';
+	import ExerciseNewList from '../../../components/ExerciseNewList.svelte';
 </script>
 
-{#each $exercises as $exercise}
-	<ExerciseEdit
-		bind:id={$exercise.id}
-		bind:exerciseName={$exercise.name}
-		bind:amount={$exercise.repetition}
-		bind:exerciseType={$exercise.type}
-	/>
-{/each}
+<ExerciseNewList exerciseComponent={ExerciseEdit} />
 
 <a
 	href="/today/option/exercise"

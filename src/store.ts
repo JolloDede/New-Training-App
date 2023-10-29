@@ -1,5 +1,5 @@
 import { browser } from "$app/environment";
-import { writable } from "svelte/store";
+import { derived, writable } from "svelte/store";
 import { ExerciseType, type Exercise } from "./types";
 
 const LOCALSTORAGE_PREFIX = "TrainingApp-";
@@ -25,3 +25,7 @@ if (initialValue.length > 0) {
     })
     exercises.set(updatedExercises);
 }
+
+// export const elementExercises = derived(exercises, ($exercises) => $exercises.filter((exer) => exer.type == ExerciseType.Element));
+// export const strengthExercises = derived(exercises, ($exercises) => $exercises.filter((exer) => exer.type == ExerciseType.Strength));
+// export const stretchExercises = derived(exercises, ($exercises) => $exercises.filter((exer) => exer.type == ExerciseType.Streching)); 

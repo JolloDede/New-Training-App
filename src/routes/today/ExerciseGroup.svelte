@@ -1,9 +1,8 @@
 <script lang="ts">
-	import SetButton from '../../components/SetButton.svelte';
 	import type { Exercise } from '../../types';
-	import ExerciseC from '../../components/ExerciseC.svelte';
 
 	export let list: Exercise[];
+	export let component: any;
 	export let title: string;
 	let hidden: boolean = true;
     if (list.length == 0) 
@@ -36,20 +35,7 @@
 	</button>
 	<div class={hidden ? '' : 'hidden'}>
 		{#each list as exercise}
-			<ExerciseC>
-				<svelte:fragment slot="name">
-					{exercise.name}
-				</svelte:fragment>
-				<svelte:fragment slot="repetitions">
-					{exercise.repetition}
-				</svelte:fragment>
-
-				<svelte:fragment slot="end">
-					<SetButton />
-					<SetButton />
-					<SetButton />
-				</svelte:fragment>
-			</ExerciseC>
+			<svelte:component this={component} bind:exercise={exercise} />
 		{/each}
 	</div>
 </div>
