@@ -1,8 +1,6 @@
 <script>
-	import { exercises } from '../../store';
-	import ExerciseCard from '../../components/ExerciseCard.svelte';
-	import ExerciseC from '../../components/ExerciseC.svelte';
-	import SetButton from '../../components/SetButton.svelte';
+	import WorkoutCard from '../../components/WorkoutCard.svelte';
+import { exercises, workouts } from '../../store';
 	import { ExerciseType } from '../../types';
 	import ExerciseList from './ExerciseList.svelte';
 
@@ -19,4 +17,11 @@
 </div>
 <div>
 	<ExerciseList list={StretchArr} title="Stretch" />
+</div>
+
+
+<div>
+	{#each $workouts as workout}
+		<WorkoutCard name={workout.name} summary={workout.summary} />
+	{/each}
 </div>
